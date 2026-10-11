@@ -1,0 +1,9 @@
+# secrets
+.env
+# Python
+.venv/
+__pycache__/
+# BioCore cache
+data/cache/
+# macOS
+.DS_Store
