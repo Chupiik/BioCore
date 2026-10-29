@@ -7,3 +7,6 @@ __pycache__/
 data/cache/
 # macOS
 .DS_Store
+
+# Course assignment PDF
+C3790ProjectDescription.pdf

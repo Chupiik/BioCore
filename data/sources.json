@@ -1,0 +1,9 @@
+{
+  "codes": "Biopython Bio.SeqUtils.IUPACData (IUPAC-IUBMB)",
+  "name, formula, mass, smiles": "NCBI PubChem PUG REST, https://pubchem.ncbi.nlm.nih.gov/",
+  "kyte_doolittle": "Kyte & Doolittle 1982, J Mol Biol 157:105-132, via Biopython Bio.SeqUtils.ProtParamData.kd",
+  "side_chain_pka": "Biopython Bio.SeqUtils.IsoelectricPoint (pK set of Bjellqvist et al., as used by ExPASy Compute pI/Mw, https://web.expasy.org/compute_pi/pi_tool-doc.html)",
+  "imgt_hydropathy, imgt_chemical, imgt_charge": "IMGT, Pommie et al. 2004, J Mol Recognit 17:17-32; https://www.imgt.org/IMGTeducation/Aide-memoire/_UK/aminoacids/IMGTclasses.html",
+  "nutrition": "WHO/FAO/UNU TRS 935 (2007), https://iris.who.int/handle/10665/43411",
+  "name_cs, name_sk": "Czech / Slovak Wikipedia article titles (language links of the English article). Not an official IUPAC or standards-body list."
+}
