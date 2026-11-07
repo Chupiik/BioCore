@@ -31,7 +31,11 @@ BioCore connects the two using modern learning science (spaced repetition, activ
 
 * Codon wheel: click a codon to see its amino acid, and the other way round.
 
-* Codon quiz: "Which amino acid does GCU code for?", "How many codons does leucine have?"
+* Concept quiz instead of memorising all 64 codons: only the start codon (AUG) and the three stop codons are drilled. Everything else is taught from first principles — the degenerate ("wobble") third base, the four classes of mutation (silent, missense, nonsense, frameshift) and how the ribosome finds the reading frame and the open reading frame in an mRNA.
+
+* A lesson is applied, not recited. Ten questions about "AUG" would be ten definitions, so every lesson declares a mix of formats: find the codon in a short sequence (`GAUGCA` vs `GCAUGC`), trap the DNA spelling (`ATG` is not an mRNA start codon), translate a three-codon ORF into a peptide (`AUG GCA UAG` → Met–Ala–Stop, picked or typed), read a sequence after a one-base deletion, and pick which change creates a premature stop or leaves the protein untouched. No two questions of the same format ever follow each other.
+
+* Every answer comes with a written explanation of *why*, shown whether the answer was right or wrong.
 
 * Translate & Mutate it: take a piece of real human mRNA, find the start codon and reading frame in a 3-tier visualizer. Delete a single nucleotide to instantly watch the reading frame shift and cause a premature stop.
 
@@ -101,6 +105,8 @@ We know the output is right when it matches trusted references:
 * Charge at pH 7: aspartate and glutamate negative, lysine and arginine positive.
 
 * Genetic code: 64 codons, 61 code for the 20 amino acids and 3 are stops (UAA, UAG, UGA); methionine has one codon, leucine, serine and arginine have six.
+
+* The genetic-code quiz never asks for an arbitrary codon → amino acid mapping: only AUG and the three stops are recalled, and every other answer (wobble, mutation class, reading frame, ORF length) is re-derived from NCBI table 1 by the test suite.
 
 * Our translation of a real coding sequence (and simulated frameshifts) is identical to the protein sequence in UniProt, starts with methionine and ends at a stop codon.
 
