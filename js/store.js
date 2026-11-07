@@ -6,10 +6,14 @@ export const MAX_STRENGTH = 5;
 const REVIEW_AFTER_DAYS = [0, 1, 2, 4, 8, 16];
 const XP_PER_LEVEL = 200;
 
+export const MODULES = ["amino", "genetic"];
+
 const fresh = () => ({
   xp: 0, streak: 0, lastDay: null, dayXp: {}, goal: 50,
   lang: "en", theme: "dark",
-  aa: {},        // one-letter code -> { s: strength 0-5, t: time last answered }
+  activeModule: "amino",   // "amino" | "genetic": the module the user was last in
+  // one-letter amino acid code ("K") or three-letter codon ("AUG") -> { s: strength 0-5, t: time last answered }
+  aa: {},
   lessons: {},   // lesson id -> { stars }
 });
 
@@ -32,8 +36,12 @@ export function save() {
 export const get = () => state;
 export function set(key, value) { state[key] = value; save(); }
 
+// --- modules ----------------------------------------------------------------------------------
+export const getModule = () => (MODULES.includes(state.activeModule) ? state.activeModule : "amino");
+export function setModule(id) { state.activeModule = MODULES.includes(id) ? id : "amino"; save(); }
+
 export function reset() {
-  state = { ...fresh(), lang: state.lang, theme: state.theme };
+  state = { ...fresh(), lang: state.lang, theme: state.theme, activeModule: getModule() };
   save();
 }
 
